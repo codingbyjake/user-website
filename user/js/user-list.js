@@ -10,6 +10,10 @@ const loaded = async () => {
     render()
 }
 
+const logout = () => {
+    document.location.href = "user-login.html";
+}
+
 const render = () => {
     let tbody = document.getElementById("tbody");
     tbody.innerHTML = "";
@@ -25,7 +29,7 @@ const render = () => {
         row += `<td>${user.isReviewer}</td>`;
         row += `<td>${user.isAdmin}</td>`;
         row += `<td>`;
-        row += `<a href="user-detail.html?id=${user.id}">Detail | </a>`;
+        row += `<a class="nav-item" href="user-detail.html?id=${user.id}">Detail | </a>`;
         row += `<a href="user-change.html?id=${user.id}">Change</a>`;
         row += `</td>`;
         row += `</tr>`;

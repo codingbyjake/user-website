@@ -40,3 +40,9 @@ async function deleteApiAsync(url){
     });
     return response.status
 }
+
+// ****************** Login ******************
+async function loginApiAsync(url){
+    const response = await fetch(url);
+    return response.status
+}

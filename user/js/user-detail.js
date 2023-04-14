@@ -37,3 +37,11 @@ const setDetailProperty = (idAttr, val) => {
 const backToList = () => {
     document.location.href = "user-list.html";
  }
+
+ const removeUser = async () => {
+    getUrlParams()
+    let status = await deleteUser(params.id);
+    if(status === 204){
+        backToList();
+    }
+ }

@@ -34,3 +34,9 @@ const deleteUser = async (id) => {
     console.log(status);
     return status;
 }
+
+// ****************** GET User by Username & Password ******************
+const getUserByUsernameAndPassword = async (un, pwd) => {
+    const status = await loginApiAsync(`${userurl}/${un}/${pwd}`)
+
+}
